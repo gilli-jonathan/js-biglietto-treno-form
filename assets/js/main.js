@@ -35,7 +35,8 @@ btnEl.addEventListener("click", (event) => {
   }
 
   //parte della task 2
-  priceEl.innerText = final_price;
+  priceEl.innerText = `ma cosa più importante preparati a pagare: ${final_price} $ ;-)`;
+  infoEL.innerText = `ciao viaggiatore, complimenti per come porti i tuoi ${user_age} anni, prepara un cuscino per fare questi ${user_km} km`;
 });
 
 /*
@@ -47,3 +48,4 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 //TASK 2
 
 const priceEl = document.getElementById("price_html");
+const infoEL = document.getElementById("info_recap");
