@@ -6,21 +6,22 @@ const btnEl = document.getElementById("btn");
 
 const sconto_minori = 0.2;
 const sconto_anziani = 0.4;
-const price = 0.21;
 
 btnEl.addEventListener("click", (event) => {
   event.preventDefault();
   const user_age = ageEl.value;
   const user_km = kmEl.value;
   console.log(user_age);
+  console.log(user_km);
 
+  const price = user_km * 0.21;
   let final_price = 0;
 
   if (user_age < 18) {
     //calcolo prezzo per mocciosi
     final_price = (price - price * sconto_minori).toFixed(2);
     console.log(final_price);
-  } else if (ages > 65) {
+  } else if (user_age > 65) {
     //calcolo prezzo per nonnetti
     final_price = (price - price * sconto_anziani).toFixed(2);
     console.log(final_price);
